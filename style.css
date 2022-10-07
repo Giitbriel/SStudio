@@ -53,7 +53,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  animation: logoshow-animation 3s;
+  animation: logoshow-animation 2s;
 }
 
 .bar {
@@ -88,6 +88,7 @@ button {
   width: 100%;
   left: 0;
   z-index: 5;
+  animation: logoshow-animation 2s;
 }
 
 header {
@@ -107,7 +108,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: logoshow-animation 3s;
+  animation: logoshow-animation 2s;
 }
 
 .inner {
@@ -115,7 +116,7 @@ header {
   text-align: center;
   color: #fff;
   padding: 0 2rem;
-  animation: logoshow-animation 3s;
+  animation: logoshow-animation 2s;
 }
 
 .title {
@@ -145,15 +146,7 @@ header {
     filter: blur(3px);
   }
 }
-@keyframes blurbg-animation {
-  from{
-    filter: none;
-  }
-  to
-  {
-    filter: blur(8px);
-  }
-}
+
 @keyframes logoshow-animation {
   from{
     opacity: 0;
@@ -165,6 +158,32 @@ header {
     filter: blur(1px);
   }
 }
+@keyframes logoshow4-animation {
+  from{
+    opacity: 0;
+    filter:blur(8px);
+    transform: translateX(0);
+  }
+  to
+  {
+    opacity: 1;
+    filter: blur(2px);
+    transform: translateX(-10vw);
+  }
+}
+@keyframes logoshow2-animation {
+  from{
+    opacity: 0;
+    filter:blur(8px);
+    transform: translateX(0);
+  }
+  to
+  {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(-10vw);
+  }
+}
 @keyframes logoshow1-animation {
   from{
     opacity: 0;
@@ -174,7 +193,7 @@ header {
   to
   {
     opacity: 1;
-    filter: blur(1px);
+    filter: blur(0px);
   }
 }
 @keyframes logoshow3-animation {
@@ -186,7 +205,7 @@ header {
   to
   {
     opacity: 1;
-    filter: blur(1px);
+    filter: blur(0px);
     transform: translateX(-10vw);
   }
 }
@@ -215,7 +234,7 @@ ul {
 }
 .container.active .linktest
 {
-  filter: blur(3px);
+
   pointer-events: unset;
 }
 .container.active .logoplace{
@@ -371,15 +390,19 @@ ul {
 }
 */
 .container.active .main {
- animation: logoshow-animation 3s;
+ animation: logoshow4-animation 2s;
   background-image: url(images/bglogo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 5;
+  transform: translateX(-10vw);
+  filter: blur(2px);
 
 }
-.container.active 
+.container.active .linktest{
+  opacity: 0;
+}
 
 .sociallinks {
 	width: inherit;
@@ -446,7 +469,7 @@ display: flex;
 }
 .logoplace
 {
-  animation: logoshow-animation 3s;
+  animation: logoshow-animation 2s;
   width: 100px;
   height: 150px;
   padding: 15px 0px 0px 15px;
